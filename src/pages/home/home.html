@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding-right>
+
+  <ion-card>
+    <ion-card-header>
+      Badge component
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon color="primary" name="logo-facebook" item-start></ion-icon>
+        Paul Halliday
+        <ion-badge item-end>1,250</ion-badge>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header>
+      Badge native plugin
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>Badge Number</ion-label>
+        <ion-input type="number" [(ngModel)]="badgeNumber">
+        </ion-input>
+      </ion-item>
+
+      <button ion-button (click)="setBadges(badgeNumber)">Set Badges to {{badgeNumber}}</button>
+      <button ion-button (click)="increaseBadges(badgeNumber)">Increase Badges by {{badgeNumber}}</button>
+      <button ion-button (click)="decreaseBadges(badgeNumber)">Decrease Badges by {{badgeNumber}}</button>
+      <button ion-button (click)="getBadges()">Get Badges</button>
+      <button ion-button (click)="clearBadges()">Clear Badges</button>
+      <button ion-button (click)="requestPermission()">Request Permission</button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card>
+    <ion-card-header>
+      In App Browser plugin
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>URL</ion-label>
+        <ion-input type="url" [(ngModel)]="url"></ion-input>
+      </ion-item>
+      <button ion-button block clear (click)="openWebpage(url)">Open Webpage</button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      App version plugin
+    </ion-card-header>
+    <ion-card-content>
+      <h3>
+        {{appInfo}}
+      </h3>
+      <hr>
+      <button ion-button (click)="getAppName()">Get App Name</button>
+      <button ion-button (click)="getPackageName()">Get Package Name</button>
+      <button ion-button (click)="getVersionNumber()">Get Version Number</button>
+      <button ion-button (click)="getVersionCode()">Get Version Code</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
